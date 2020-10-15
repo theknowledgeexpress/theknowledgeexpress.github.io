@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>The Knowledge Express - Home</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
+            li{
+                list-style: none;
+            }
+
+            nav{
+                height: 60px;
+                width: 100%;
+                display: flex;
+                background: #000;
+                position: fixed;
+                align-items: center;
+                box-shadow: 0px 1px 10px 1px #505050;
+            }
+
+            #menu, #close{
+                padding: 0 20px;
+                cursor: pointer;
+            }
+            
+            #close{
+                display: none;
+            }
+
+            #menu .fa-bars{
+                font-size: 25px;            
+                color: yellowgreen;
+            }
+
+            #close .fa-times{
+                font-size: 27.5px;
+                color: yellowgreen;
+            }
+
+            #logo{
+                text-align: center;
+                font-family: cursive;
+                font-size: 26px;
+                font-weight: bold;
+      
+                background: -webkit-linear-gradient(180deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+          
+            #sub-menu{
+                padding-top: 10px;
+                padding-left: 40px;
+                padding-right: 40px;
+                position: fixed;
+                display: none;
+                top: 60px;
+                height: 520px;
+                width: 300px;
+                background: #212424;
+                box-shadow: 0px 1px 10px 1px #505050;
+                overflow-y: scroll;
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;
+                border-bottom: 3px solid limegreen;
+                border-right: 3px solid limegreen;
+                border-bottom-right-radius: 30px;
+            }
+
+            #sub-menu::-webkit-scrollbar{
+                display: none;
+            }
+
+            #sub-menu a li{
+                padding-left: 10px;
+                line-height: 50px;
+                font-size: 20px;
+                font-weight: 500;
+                font-family: 'Open Sans', sans-serif;
+                color: white;
+            }
+
+            #sub-menu a li:hover{
+                border-left: 3px solid white;
+                color: yellowgreen;
+            }
+
+            .fa-instagram, .fa-youtube{
+                font-size: 30px;
+            }
+
+            .fa-instagram{
+                background: -webkit-linear-gradient(-130deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .fa-youtube{
+                color: #f00000;
+            }
+
+            .line{
+                margin: 15px 0;
+                border-top: 1px solid limegreen;
+            }
+
+            #sub-menu #social-media-div{
+                padding: 0 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #sub-menu #social-media-div #social-media-text{
+                font-size: 20px;
+                line-height: 30px;
+                cursor: default;
+                font-family: 'Open Sans', sans-serif;
+            }
+        </style>
+    </head>
+<body>
+    <nav>
+        <a id="menu"><li><i class="fa fa-bars"></i></li></a>
+        <a id="close"><li><i class="fa fa-times"></i></li></a>
+
+        <div style="margin: auto">
+            <a id="logo" href="home.html">The Knowledge Express</a>
+        </div>    
+    </nav>
+
+    <div id="sub-menu">
+        <a href=""><li>Advisor</li></a>
+        <a href=""><li>Billionaires</li></a>
+        <a href=""><li>Blogs</li></a>
+        <a href=""><li>Business</li></a>
+        <a href=""><li>Lifestyle</li></a>
+        <a href=""><li>List</li></a>
+
+        <a href="#"><li class="line"></li></a>
+
+        <div id="social-media-div">
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href="#" id="social-media-text">SOCIAL MEDIA</a>
+            <a href=""><i class="fa fa-youtube"></i></a>
+        </div>
+
+        <a href="#"><li  class="line"></li></a>
+
+        <a href=""><li>About</li></a>
+        <a href=""><li>Contact</li></a>
+        <a href=""><li>Privacy Policy</li></a>
+        <a href=""><li>Terms and Conditions</li></a>
+    </div>
+
+    <section style="height: 1000px; width: auto; background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+</body>
+
+<script>
+        $("#menu").click(function(){
+            $("#sub-menu").css("display", "block");
+            $("#close").css("display", "block");
+            $("#menu").css("display", "none");
+            $("body").css("overflow", "hidden");
+        });
+
+        $("#close").click(function(){
+            $("#sub-menu").css("display", "none");
+            $("#close").css("display", "none");
+            $("#menu").css("display", "block");
+            $("body").css("overflow", "auto");
+        });
+</script>
+</html>
